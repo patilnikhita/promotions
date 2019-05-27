@@ -1,14 +1,206 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "marketingPromotion": [
+    {
+      "promotionId": 874726,
+      "internalName": "BURN PROMOTION 4 (Name: $50 Gap Cash Redeem - Unique) Wed Mar 21 13:30:04 -0700 2018",
+      "startDateTime": "2018-03-21T04:00:00Z",
+      "endDateTime": "2019-03-23T03:59:00Z",
+      "active": true,
+      "discountType": "Single Brand Discount",
+      "corePromotion": false,
+      "promotionCodeRequired": true,
+      "universalPromotion": true,
+      "promotionCodeType": "Unique",
+      "promotionCombinabilityType": "Combinable",
+      "channelBrands": [
+        {
+          "channel": "Online",
+          "brands": [
+            "Gap"
+          ]
+        },
+        {
+          "channel": "Retail",
+          "brands": [
+            "Gap"
+          ]
+        },
+        {
+          "channel": "Call-Center",
+          "brands": [
+            "Gap"
+          ]
+        }
+      ],
+      "markets": [
+        "US"
+      ],
+      "promotionTiers": [
+        {
+          "promotionRuleTierId": 874727,
+          "priority": 49,
+          "promotionTierMessages": [
+            {
+              "localeCode": "en_US",
+              "conditionSummary": "<link brand=\"1\" type=\"cat\" promoid=\"874726\" promotype=\"gid\">Save $50 on Gap merchandise with purchase of $100 or more</link>",
+              "awardSummary": "Save $50 on Gap merchandise with purchase of $100 or more"
+            }
+          ],
+          "ruleTier": {
+            "ruleTierId": 100545332,
+            "conditions": [
+              {
+                "conditionId": 100783396,
+                "conditionType": "Order Amount Threshold",
+                "conditionTypeMapName": "threshold",
+                "thresholdAmount": 100,
+                "conditionMessages": [
+                  {
+                    "localeCode": "en_US"
+                  }
+                ],
+                "conditionBrands": [
+                  {
+                    "conditionBrandId": 100934696,
+                    "brand": "Gap"
+                  }
+                ]
+              }
+            ],
+            "qualifyingRule": {
+              "ruleId": 100277603,
+              "ruleXML": "<rule id=\"100277603\">\n  <qualifier limit=\"1\" groupLevel=\"attributes\" conditionId=\"100783396\">\n    <amountThreshold>\n      <amount>100.0</amount>\n      <iteratorTerm>[ORDER_INFO:com.gap.gid.ecom.common.buy.dto.OrderInfo].getLineItemCollection().getPriceableLineItems().toList()</iteratorTerm>\n      <iteratedTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem]</iteratedTerm>\n      <amountTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getPriceInfo().getPriceAmount(com.gap.gid.ecom.common.enums.LineItemPriceInfoPriceType.LINE_ITEM_PROMO_DISCOUNTED_PRICE).doubleValue()</amountTerm>\n      <multiplierTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getQuantity().intValue()</multiplierTerm>\n    </amountThreshold>\n    <group conditional=\"AND\">\n      <qualifier limit=\"1\">\n        <expression parametersMap=\"conditionAttributeType=threshold\" negate=\"false\" associationKey=\"merchTypes\" type=\"compareTo\">\n          <rhsTerm>{7:java.lang.Integer}</rhsTerm>\n          <compareTo operator=\"EQUALS\"/>\n          <lhsTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getProductInfo().getMerchandiseType()</lhsTerm>\n        </expression>\n      </qualifier>\n      <qualifier limit=\"1\">\n        <expression parametersMap=\"conditionAttributeType=catalog\" negate=\"false\" associationKey=\"brandIds\" type=\"compareTo\">\n          <rhsTerm>{1:java.lang.String}</rhsTerm>\n          <compareTo operator=\"EQUALS\"/>\n          <lhsTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getProductInfo().getBrandId()</lhsTerm>\n        </expression>\n      </qualifier>\n    </group>\n  </qualifier>\n</rule>\n"
+            }
+          },
+          "awards": [
+            {
+              "awardId": 100783380,
+              "name": "Brand Items Discount",
+              "awardType": "Dollar Off",
+              "awardCalculationLevelId": 2500,
+              "awardAmount": 50,
+              "awardRule": {
+                "ruleId": 100277603,
+                "ruleXML": "<rule id=\"100277603\">\n  <qualifier limit=\"1\" groupLevel=\"attributes\" conditionId=\"100783396\">\n    <amountThreshold>\n      <amount>100.0</amount>\n      <iteratorTerm>[ORDER_INFO:com.gap.gid.ecom.common.buy.dto.OrderInfo].getLineItemCollection().getPriceableLineItems().toList()</iteratorTerm>\n      <iteratedTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem]</iteratedTerm>\n      <amountTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getPriceInfo().getPriceAmount(com.gap.gid.ecom.common.enums.LineItemPriceInfoPriceType.LINE_ITEM_PROMO_DISCOUNTED_PRICE).doubleValue()</amountTerm>\n      <multiplierTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getQuantity().intValue()</multiplierTerm>\n    </amountThreshold>\n    <group conditional=\"AND\">\n      <qualifier limit=\"1\">\n        <expression parametersMap=\"conditionAttributeType=threshold\" negate=\"false\" associationKey=\"merchTypes\" type=\"compareTo\">\n          <rhsTerm>{7:java.lang.Integer}</rhsTerm>\n          <compareTo operator=\"EQUALS\"/>\n          <lhsTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getProductInfo().getMerchandiseType()</lhsTerm>\n        </expression>\n      </qualifier>\n      <qualifier limit=\"1\">\n        <expression parametersMap=\"conditionAttributeType=catalog\" negate=\"false\" associationKey=\"brandIds\" type=\"compareTo\">\n          <rhsTerm>{1:java.lang.String}</rhsTerm>\n          <compareTo operator=\"EQUALS\"/>\n          <lhsTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getProductInfo().getBrandId()</lhsTerm>\n        </expression>\n      </qualifier>\n    </group>\n  </qualifier>\n</rule>\n"
+              },
+              "promotionRuleTierId": 874727,
+              "awardCombinabilityType": "Neutral",
+              "awardCount": 1,
+              "lineItemAwardProrationIndicator": false,
+              "lineItemAwardProrationType": "NONE",
+              "discountOnRegularPriceIndicator": false,
+              "awardMessages": [
+                {
+                  "localeCode": "en_US"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "promotionRuleTierId": 874728,
+          "priority": 168,
+          "promotionTierMessages": [
+            {
+              "localeCode": "es_US",
+              "conditionSummary": "<link brand=\"1\" type=\"cat\" promoid=\"874726\" promotype=\"gid\">Save $25 on Gap merchandise with purchase of $50 or more</link>",
+              "awardSummary": "Save $25 on Gap merchandise with purchase of $50 or more"
+            }
+          ],
+          "ruleTier": {
+            "ruleTierId": 100545333,
+            "conditions": [
+              {
+                "conditionId": 100783397,
+                "conditionType": "Order Amount Threshold",
+                "conditionTypeMapName": "threshold",
+                "thresholdAmount": 50,
+                "conditionMessages": [
+                  {
+                    "localeCode": "es_US"
+                  }
+                ],
+                "conditionBrands": [
+                  {
+                    "conditionBrandId": 100934697,
+                    "brand": "Gap"
+                  }
+                ]
+              }
+            ],
+            "qualifyingRule": {
+              "ruleId": 100277604,
+              "ruleXML": "<rule id=\"100277604\">\n  <qualifier limit=\"1\" groupLevel=\"attributes\" conditionId=\"100783397\">\n    <amountThreshold>\n      <amount>50.0</amount>\n      <iteratorTerm>[ORDER_INFO:com.gap.gid.ecom.common.buy.dto.OrderInfo].getLineItemCollection().getPriceableLineItems().toList()</iteratorTerm>\n      <iteratedTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem]</iteratedTerm>\n      <amountTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getPriceInfo().getPriceAmount(com.gap.gid.ecom.common.enums.LineItemPriceInfoPriceType.LINE_ITEM_PROMO_DISCOUNTED_PRICE).doubleValue()</amountTerm>\n      <multiplierTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getQuantity().intValue()</multiplierTerm>\n    </amountThreshold>\n    <group conditional=\"AND\">\n      <qualifier limit=\"1\">\n        <expression parametersMap=\"conditionAttributeType=threshold\" negate=\"false\" associationKey=\"merchTypes\" type=\"compareTo\">\n          <rhsTerm>{7:java.lang.Integer}</rhsTerm>\n          <compareTo operator=\"EQUALS\"/>\n          <lhsTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getProductInfo().getMerchandiseType()</lhsTerm>\n        </expression>\n      </qualifier>\n      <qualifier limit=\"1\">\n        <expression parametersMap=\"conditionAttributeType=catalog\" negate=\"false\" associationKey=\"brandIds\" type=\"compareTo\">\n          <rhsTerm>{1:java.lang.String}</rhsTerm>\n          <compareTo operator=\"EQUALS\"/>\n          <lhsTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getProductInfo().getBrandId()</lhsTerm>\n        </expression>\n      </qualifier>\n    </group>\n  </qualifier>\n</rule>\n"
+            }
+          },
+          "awards": [
+            {
+              "awardId": 100783382,
+              "name": "Brand Items Discount",
+              "awardType": "Dollar Off",
+              "awardCalculationLevelId": 2500,
+              "awardAmount": 25,
+              "awardRule": {
+                "ruleId": 100277604,
+                "ruleXML": "<rule id=\"100277604\">\n  <qualifier limit=\"1\" groupLevel=\"attributes\" conditionId=\"100783397\">\n    <amountThreshold>\n      <amount>50.0</amount>\n      <iteratorTerm>[ORDER_INFO:com.gap.gid.ecom.common.buy.dto.OrderInfo].getLineItemCollection().getPriceableLineItems().toList()</iteratorTerm>\n      <iteratedTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem]</iteratedTerm>\n      <amountTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getPriceInfo().getPriceAmount(com.gap.gid.ecom.common.enums.LineItemPriceInfoPriceType.LINE_ITEM_PROMO_DISCOUNTED_PRICE).doubleValue()</amountTerm>\n      <multiplierTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getQuantity().intValue()</multiplierTerm>\n    </amountThreshold>\n    <group conditional=\"AND\">\n      <qualifier limit=\"1\">\n        <expression parametersMap=\"conditionAttributeType=threshold\" negate=\"false\" associationKey=\"merchTypes\" type=\"compareTo\">\n          <rhsTerm>{7:java.lang.Integer}</rhsTerm>\n          <compareTo operator=\"EQUALS\"/>\n          <lhsTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getProductInfo().getMerchandiseType()</lhsTerm>\n        </expression>\n      </qualifier>\n      <qualifier limit=\"1\">\n        <expression parametersMap=\"conditionAttributeType=catalog\" negate=\"false\" associationKey=\"brandIds\" type=\"compareTo\">\n          <rhsTerm>{1:java.lang.String}</rhsTerm>\n          <compareTo operator=\"EQUALS\"/>\n          <lhsTerm>[LINE_ITEM:com.gap.gid.ecom.common.buy.dto.LineItem].getProductInfo().getBrandId()</lhsTerm>\n        </expression>\n      </qualifier>\n    </group>\n  </qualifier>\n</rule>\n"
+              },
+              "promotionRuleTierId": 874728,
+              "awardCombinabilityType": "Neutral",
+              "awardCount": 1,
+              "lineItemAwardProrationIndicator": false,
+              "lineItemAwardProrationType": "NONE",
+              "discountOnRegularPriceIndicator": false,
+              "awardMessages": [
+                {
+                  "localeCode": "es_US"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "marketingDetail": {
+        "promotionId": 874726,
+        "marketingName": "BURN PROMOTION 4 (Name: $50 Gap Cash Redeem - Unique) Wed Mar 21 13:30:04 -0700 2018",
+        "suppressMarketingMessage": false,
+        "promotionMessages": [
+          {
+            "localeCode": "en_US"
+          }
+        ],
+        "receiptMessages": [
+          {
+            "localeCode": "en_US"
+          }
+        ]
+      },
+      "revenueAccountingDetail": {
+        "promotionId": 874726,
+        "categoryCode": "1",
+        "subcategoryCode": "101",
+        "discountReasonCode": "521",
+        "proForma": false
+      },
+      "workflowDetail": {
+        "promotionId": 874726,
+        "promotionStatuses": [
+          {
+            "channel": "Online",
+            "promotionStatus": "QA Complete"
+          },
+          {
+            "channel": "Retail",
+            "promotionStatus": "In Development"
+          },
+          {
+            "channel": "Call-Center",
+            "promotionStatus": "QA Complete"
+          }
+        ]
+      },
+      "auditDetail": {
+        "updatedDate": "2018-03-21T20:32:16Z"
+      }
+    }
+  ]
 }
